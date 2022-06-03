@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jquery</title>
+</head>
+<body>
+<div id="text">
+<b>Hello</b>
+</div>
+<h1>Jquery</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nisl arcu, aliquet eget feugiat nec, sodales eu augue. Donec lacinia, risus sit amet aliquam convallis, mi tellus semper mi, sed lacinia neque sem id mi. Morbi posuere consequat magna id ullamcorper. Proin suscipit augue est, rhoncus efficitur nibh finibus id. Quisque laoreet commodo urna ut consequat. Suspendisse nec est erat. Fusce auctor tristique diam eget tempor.</p>
+
+<button id="btnhide">hide</button>
+<button id="btnshow">show</button>
+<button id="btnslideup">SlideUp</button>
+<button id="btnslidedown">SlideDown</button>
+<button id="btnslidetoggle">Slidetoggle</button>
+</body>
+<script src="jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function()
+  {
+	  $("#btnhide").click(function()
+	  {
+		  $("h1").hide();
+	  });
+	  $("#btnshow").click(function()
+	  {
+		  $("h1").show();
+	  });
+	  
+	  $("h1").click(function(e) {
+        $("h1").toggle("slow");
+    });
+	
+	$("p").click(function(e) {
+        $("p").toggle("slow");
+    });
+	$("p").click(function(e) {
+        $("p").toggle("slow");
+    });
+	$("#btnslideup").click(function(e) {
+        $("#text").slideUp();
+    });
+	$("#btnslidedown").click(function(e) {
+        $("#text").slideDown();
+    });
+	$("#btnslidetoggle").click(function(e) {
+        $("#text").slideToggle();
+    });
+	
+	  
+  });
+</script>
+</html>
